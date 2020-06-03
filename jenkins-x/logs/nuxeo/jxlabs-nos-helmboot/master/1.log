@@ -1,38 +1,56 @@
 
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-6gfpc[0m
-{"level":"info","ts":1591211505.45541,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1591211505.4559047,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-maste-g2vxh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-xbzdb[0m
+{"level":"info","ts":1591211527.810733,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591211527.81125,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-wwpkk[0m
-{"level":"info","ts":1591211506.0343664,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1591211506.035557,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-maste-g2vxh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vqmtl[0m
+{"level":"info","ts":1591211528.7865326,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591211528.7876484,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-maste-g2vxh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nuxeo-jxlabs-nos-helmboot-lq5sw-jvkmt[0m
-{"level":"info","ts":1591211512.145984,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1591211512.5567336,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot.git @ a15b8f38181a53f5a39d1d55e1b52d58ab34caca in path /workspace/source"}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-maste-g2vxh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-maste-g2vxh-bxhtl[0m
+{"level":"info","ts":1591211533.9165251,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591211534.2966354,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot.git @ v0.0.97 in path /workspace/source"}
 
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-maste-g2vxh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:a15b8f38181a53f5a39d1d55e1b52d58ab34caca
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
-SKIP merge-pull-refs: Nothing to merge
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-maste-g2vxh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
-Effective pipeline written to jenkins-x-release-effective.yml
-
-Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-lq5sw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
-running command: echo \$(**-release-version) > VERSION
-
-running command: ** step tag --version \$(cat VERSION)
-error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
-: git output: To https://github.com/nuxeo/**labs-nos-helmboot.git
- ! [remote rejected] v0.0.97 -> v0.0.97 (cannot lock ref 'refs/tags/v0.0.97': reference already exists)
-error: failed to push some refs to 'https://github.com/nuxeo/**labs-nos-helmboot.git': failed to run 'git push origin v0.0.97' command in directory '', output: 'To https://github.com/nuxeo/**labs-nos-helmboot.git
- ! [remote rejected] v0.0.97 -> v0.0.97 (cannot lock ref 'refs/tags/v0.0.97': reference already exists)
-error: failed to push some refs to 'https://github.com/nuxeo/**labs-nos-helmboot.git''
-error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step tag --version $(cat VERSION)' command in directory '/workspace/source', output: ''
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-maste-g2vxh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+rm -rf build release dist
+go mod download
+go: parsing ../**labs-nos-**/go.mod: open /workspace/**labs-nos-**/go.mod: no such file or directory
+go: finding github.com/hashicorp/vault v1.1.2
+go: finding github.com/knative/serving v0.7.0
+go: finding github.com/spf13/cobra v0.0.6
+go: finding github.com/jenkins-x/go-scm v1.5.76
+go: finding github.com/pkg/errors v0.8.1
+go: finding github.com/stretchr/testify v1.4.0
+go: finding github.com/banzaicloud/bank-vaults v0.0.0-20190508130850-5673d28c46bd
+go: finding github.com/cli/cli v0.6.2
+go: finding k8s.io/metrics v0.0.0-20181128195641-3954d62a524d
+go: finding sigs.k8s.io/yaml v1.1.0
+go: finding github.com/go-yaml/yaml v2.1.0+incompatible
+go: finding k8s.io/apiextensions-apiserver v0.0.0-20190528110544-fa58353d80f3
+go: finding k8s.io/client-go v0.0.0-20190528110200-4f3abb12cae2
+go: finding k8s.io/kubernetes v1.11.3
+go: finding github.com/tektoncd/pipeline v0.8.0
+go: finding github.com/heptio/sonobuoy v0.16.0
+go: finding github.com/google/uuid v1.1.1
+go: finding github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314
+go: finding github.com/google/go-cmp v0.3.1
+go: finding k8s.io/test-infra v0.0.0-20190131093439-a22cef183a8f
+go: finding k8s.io/apimachinery v0.0.0-20190221084156-01f179d85dbc
+go: finding gopkg.in/yaml.v3 v3.0.0-20200121175148-a6ecf24a6d71
+go: finding github.com/jetstack/cert-manager v0.5.2
+go: finding k8s.io/api v0.0.0-20190528110122-9ad12a4af326
+go: finding github.com/petergtz/pegomock v2.7.0+incompatible
+go: finding github.com/mitchellh/go-homedir v1.1.0
+go: error loading module requirements
+make: *** [Makefile:83: build] Error 1
 [31m
-Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-make-build'. The execution of the pipeline has stopped.[0m
