@@ -8,9 +8,9 @@ import (
 
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd/secrets"
 	"github.com/jenkins-x-labs/helmboot/pkg/fakes/fakejxfactory"
-	"github.com/jenkins-x/jx/pkg/config"
-	"github.com/jenkins-x/jx/pkg/kube"
-	"github.com/jenkins-x/jx/pkg/util"
+	"github.com/jenkins-x/jx/v2/pkg/config"
+	"github.com/jenkins-x/jx/v2/pkg/kube"
+	"github.com/jenkins-x/jx/v2/pkg/util"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/runtime"

@@ -5,15 +5,15 @@ import (
 	"io/ioutil"
 	"os"
 
-	v1 "github.com/jenkins-x/jx/pkg/apis/jenkins.io/v1"
-	"github.com/jenkins-x/jx/pkg/client/clientset/versioned"
-	"github.com/jenkins-x/jx/pkg/cloud"
-	"github.com/jenkins-x/jx/pkg/config"
-	"github.com/jenkins-x/jx/pkg/gits"
-	"github.com/jenkins-x/jx/pkg/jxfactory"
-	"github.com/jenkins-x/jx/pkg/kube"
-	"github.com/jenkins-x/jx/pkg/log"
-	"github.com/jenkins-x/jx/pkg/util"
+	v1 "github.com/jenkins-x/jx/v2/pkg/apis/jenkins.io/v1"
+	"github.com/jenkins-x/jx/v2/pkg/client/clientset/versioned"
+	"github.com/jenkins-x/jx/v2/pkg/cloud"
+	"github.com/jenkins-x/jx/v2/pkg/config"
+	"github.com/jenkins-x/jx/v2/pkg/gits"
+	"github.com/jenkins-x/jx/v2/pkg/jxfactory"
+	"github.com/jenkins-x/jx/v2/pkg/kube"
+	"github.com/jenkins-x/jx/v2/pkg/log"
+	"github.com/jenkins-x/jx/v2/pkg/util"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -120,7 +120,7 @@ func GetRequirementsFromGit(gitURL string) (*config.RequirementsConfig, error) {
 		return nil, errors.Wrapf(err, "failed to git clone %s to dir %s", gitURL, tempDir)
 	}
 
-	requirements, _, err := config.LoadRequirementsConfig(tempDir)
+	requirements, _, err := config.LoadRequirementsConfig(tempDir, true)
 	if err != nil {
 		return requirements, errors.Wrapf(err, "failed to requirements YAML file from %s", tempDir)
 	}
@@ -129,7 +129,7 @@ func GetRequirementsFromGit(gitURL string) (*config.RequirementsConfig, error) {
 
 // OverrideRequirements allows CLI overrides
 func OverrideRequirements(cmd *cobra.Command, args []string, dir string, outputRequirements *config.RequirementsConfig, flags *RequirementFlags) error {
-	requirements, fileName, err := config.LoadRequirementsConfig(dir)
+	requirements, fileName, err := config.LoadRequirementsConfig(dir, true)
 	if err != nil {
 		return err
 	}
@@ -175,7 +175,7 @@ func OverrideRequirements(cmd *cobra.Command, args []string, dir string, outputR
 
 // ValidateApps validates the apps match the requirements
 func ValidateApps(dir string) (*config.AppConfig, string, error) {
-	requirements, _, err := config.LoadRequirementsConfig(dir)
+	requirements, _, err := config.LoadRequirementsConfig(dir, true)
 	if err != nil {
 		return nil, "", err
 	}
@@ -390,7 +390,7 @@ func FindRequirementsAndGitURL(jxFactory jxfactory.Factory, gitURLOption string,
 		}
 	}
 	if requirements == nil {
-		requirements, _, err = config.LoadRequirementsConfig(dir)
+		requirements, _, err = config.LoadRequirementsConfig(dir, true)
 		if err != nil {
 			return requirements, gitURL, err
 		}

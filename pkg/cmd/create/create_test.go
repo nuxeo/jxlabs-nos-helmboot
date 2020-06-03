@@ -10,7 +10,7 @@ import (
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd/create"
 	"github.com/jenkins-x-labs/helmboot/pkg/fakes/fakegit"
 	"github.com/jenkins-x-labs/helmboot/pkg/fakes/fakejxfactory"
-	"github.com/jenkins-x/jx/pkg/config"
+	"github.com/jenkins-x/jx/v2/pkg/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -8,9 +8,9 @@ import (
 
 	vaultapi "github.com/hashicorp/vault/api"
 	"github.com/jenkins-x-labs/helmboot/pkg/clienthelpers"
-	"github.com/jenkins-x/jx/pkg/jxfactory"
-	"github.com/jenkins-x/jx/pkg/log"
-	"github.com/jenkins-x/jx/pkg/util"
+	"github.com/jenkins-x/jx/v2/pkg/jxfactory"
+	"github.com/jenkins-x/jx/v2/pkg/log"
+	"github.com/jenkins-x/jx/v2/pkg/util"
 	"github.com/pkg/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"

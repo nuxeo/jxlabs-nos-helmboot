@@ -6,11 +6,11 @@ import (
 
 	"github.com/jenkins-x-labs/helmboot/pkg/reqhelpers"
 	"github.com/jenkins-x-labs/helmboot/pkg/secretmgr"
-	v1 "github.com/jenkins-x/jx/pkg/apis/jenkins.io/v1"
-	"github.com/jenkins-x/jx/pkg/cloud"
-	"github.com/jenkins-x/jx/pkg/config"
-	"github.com/jenkins-x/jx/pkg/jxfactory"
-	"github.com/jenkins-x/jx/pkg/kube"
+	v1 "github.com/jenkins-x/jx/v2/pkg/apis/jenkins.io/v1"
+	"github.com/jenkins-x/jx/v2/pkg/cloud"
+	"github.com/jenkins-x/jx/v2/pkg/config"
+	"github.com/jenkins-x/jx/v2/pkg/jxfactory"
+	"github.com/jenkins-x/jx/v2/pkg/kube"
 	"github.com/pkg/errors"
 	corev1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -162,7 +162,7 @@ func (r *KindResolver) resolveRequirements(secretsYAML string) (*config.Requirem
 		return requirements, ns, err
 	}
 
-	requirements, _, err := config.LoadRequirementsConfig(r.Dir)
+	requirements, _, err := config.LoadRequirementsConfig(r.Dir, true)
 	if err != nil {
 		return requirements, ns, errors.Wrapf(err, "failed to requirements YAML file from %s", r.Dir)
 	}
