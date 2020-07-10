@@ -10,7 +10,7 @@ import (
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd/create"
 	"github.com/jenkins-x-labs/helmboot/pkg/fakes/fakegit"
 	"github.com/jenkins-x-labs/helmboot/pkg/fakes/fakejxfactory"
-	"github.com/jenkins-x/jx/pkg/config"
+	"github.com/jenkins-x/jx/v2/pkg/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -124,7 +124,7 @@ func TestCreate(t *testing.T) {
 		expectedGitURL := fmt.Sprintf("https://fake.com/jstrachan/environment-%s-dev.git", tc.Name)
 		assert.Equal(t, expectedGitURL, text, "output Git URL")
 
-		requirements, _, err := config.LoadRequirementsConfig(co.OutDir)
+		requirements, _, err := config.LoadRequirementsConfig(co.OutDir, true)
 		require.NoError(t, err, "failed to load requirements from %s", co.OutDir)
 		assert.Equal(t, true, requirements.Cluster.EnvironmentGitPublic, "requirements.Cluster.EnvironmentGitPublic")
 		assert.Equal(t, true, requirements.Cluster.GitPublic, "requirements.Cluster.GitPublic")

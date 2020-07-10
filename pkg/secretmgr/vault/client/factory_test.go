@@ -8,7 +8,7 @@ import (
 
 	"github.com/jenkins-x-labs/helmboot/pkg/secretmgr/vault/client"
 	"github.com/jenkins-x-labs/helmboot/pkg/secretmgr/vault/client/fake"
-	"github.com/jenkins-x/jx/pkg/jxfactory"
+	"github.com/jenkins-x/jx/v2/pkg/jxfactory"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

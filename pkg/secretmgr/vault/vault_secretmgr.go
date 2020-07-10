@@ -5,8 +5,8 @@ import (
 
 	"github.com/jenkins-x-labs/helmboot/pkg/secretmgr"
 	vaultclient "github.com/jenkins-x-labs/helmboot/pkg/secretmgr/vault/client"
-	"github.com/jenkins-x/jx/pkg/jxfactory"
-	"github.com/jenkins-x/jx/pkg/log"
+	"github.com/jenkins-x/jx/v2/pkg/jxfactory"
+	"github.com/jenkins-x/jx-logging/pkg/log"
 	"github.com/pkg/errors"
 )
 

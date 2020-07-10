@@ -9,8 +9,8 @@ import (
 	"github.com/jenkins-x-labs/helmboot/pkg/secretmgr/local"
 	"github.com/jenkins-x-labs/helmboot/pkg/secretmgr/proxy"
 	"github.com/jenkins-x-labs/helmboot/pkg/secretmgr/vault"
-	"github.com/jenkins-x/jx/pkg/config"
-	"github.com/jenkins-x/jx/pkg/jxfactory"
+	"github.com/jenkins-x/jx/v2/pkg/config"
+	"github.com/jenkins-x/jx/v2/pkg/jxfactory"
 )
 
 // NewSecretManager creates a secret manager from a kind string
