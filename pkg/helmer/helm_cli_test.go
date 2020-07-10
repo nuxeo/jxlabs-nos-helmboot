@@ -12,7 +12,7 @@ import (
 	helm "github.com/jenkins-x-labs/helmboot/pkg/helmer"
 	"github.com/stretchr/testify/assert"
 
-	mocks "github.com/jenkins-x/jx/pkg/util/mocks"
+	mocks "github.com/jenkins-x/jx/v2/pkg/util/mocks"
 	. "github.com/petergtz/pegomock"
 )
 

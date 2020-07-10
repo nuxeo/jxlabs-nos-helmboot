@@ -10,7 +10,7 @@ import (
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd/upgrade"
 	"github.com/jenkins-x-labs/helmboot/pkg/fakes/fakegit"
 	"github.com/jenkins-x-labs/helmboot/pkg/fakes/fakejxfactory"
-	v1 "github.com/jenkins-x/jx/pkg/apis/jenkins.io/v1"
+	v1 "github.com/jenkins-x/jx-api/pkg/apis/jenkins.io/v1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/runtime"

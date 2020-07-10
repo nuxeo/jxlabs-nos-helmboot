@@ -1,10 +1,10 @@
 package fakejxfactory
 
 import (
-	"github.com/jenkins-x/jx/pkg/client/clientset/versioned"
-	v1fake "github.com/jenkins-x/jx/pkg/client/clientset/versioned/fake"
-	"github.com/jenkins-x/jx/pkg/jxfactory"
-	"github.com/jenkins-x/jx/pkg/kube"
+	"github.com/jenkins-x/jx-api/pkg/client/clientset/versioned"
+	v1fake "github.com/jenkins-x/jx-api/pkg/client/clientset/versioned/fake"
+	"github.com/jenkins-x/jx/v2/pkg/jxfactory"
+	"github.com/jenkins-x/jx/v2/pkg/kube"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/kubernetes"
@@ -12,6 +12,8 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/tools/clientcmd/api"
+
+	resourceclient "github.com/tektoncd/pipeline/pkg/client/resource/clientset/versioned"
 
 	tektonclient "github.com/tektoncd/pipeline/pkg/client/clientset/versioned"
 	tektonfake "github.com/tektoncd/pipeline/pkg/client/clientset/versioned/fake"
@@ -93,5 +95,9 @@ func (f *FakeFactory) LoadConfig() (*api.Config, *clientcmd.PathOptions, error) 
 }
 
 func (f *FakeFactory) UpdateConfig(namespace string, server string, caData string, user string, token string) error {
+	panic("implement me")
+}
+
+func (f *FakeFactory) CreateTektonPipelineResourceClient() (resourceclient.Interface, string, error) {
 	panic("implement me")
 }
