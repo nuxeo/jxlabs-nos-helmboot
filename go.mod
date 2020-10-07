@@ -5,12 +5,13 @@ go 1.14
 require (
 	github.com/banzaicloud/bank-vaults v0.0.0-20191212164220-b327d7f2b681
 	github.com/cli/cli v0.6.2
+	github.com/cloudevents/sdk-go v1.0.0 // indirect
 	github.com/go-yaml/yaml v2.1.0+incompatible
-	github.com/google/go-cmp v0.4.0
+	github.com/google/go-cmp v0.4.1
 	github.com/google/uuid v1.1.1
 	github.com/hashicorp/vault/api v1.0.4
 	github.com/heptio/sonobuoy v0.16.0
-	github.com/jenkins-x/go-scm v1.5.141
+	github.com/jenkins-x/go-scm v1.5.159
 	github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314
 	github.com/jenkins-x/jx-api v0.0.13
 	github.com/jenkins-x/jx-logging v0.0.10
@@ -21,21 +22,23 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.0.0
 	github.com/stretchr/testify v1.6.1
-	github.com/tektoncd/pipeline v0.11.3
+	github.com/tektoncd/pipeline v0.14.2
+	github.com/tektoncd/plumbing/pipelinerun-logs v0.0.0-20191206114338-712d544c2c21 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
-	k8s.io/api v0.17.2
-	k8s.io/apiextensions-apiserver v0.0.0-20191114105449-027877536833
-	k8s.io/apimachinery v0.17.2
+	k8s.io/api v0.18.1
+	k8s.io/apiextensions-apiserver v0.17.6
+	k8s.io/apimachinery v0.18.1
 	k8s.io/client-go v11.0.1-0.20190805182717-6502b5e7b1b5+incompatible
 	k8s.io/kubernetes v1.14.0
 	k8s.io/metrics v0.0.0-20180620010437-b11cf31b380b
-	k8s.io/test-infra v0.0.0-20190131093439-a22cef183a8f
-	knative.dev/serving v0.12.1-0.20200210194206-365600fcbe27
-	sigs.k8s.io/yaml v1.1.0
+	k8s.io/test-infra v0.0.0-20200514184223-ba32c8aae783
+	knative.dev/eventing-contrib v0.11.2 // indirect
+	knative.dev/serving v0.16.0
+	sigs.k8s.io/yaml v1.2.0
 
 )
 
-replace github.com/jenkins-x/jx/v2 => github.com/nuxeo/jxlabs-nos-jx/v2 v2.1.1
+replace github.com/jenkins-x/jx/v2 => github.com/nuxeo/jxlabs-nos-jx/v2 v2.1.151-2-cbadfd2c0-master
 
 replace k8s.io/api => k8s.io/api v0.16.5
 
